@@ -39,7 +39,7 @@ export const about = {
     "At the chair you'll find Hemza, a long-trusted barber whose steady hand has shaped generations of the same families. Kids who took their first cut here now bring their own.",
   ],
   statLabel: "years of trust",
-  statValue: "25+",
+  statValue: "5",
 };
 
 export type Service = { name: string; blurb: string; icon: string; feature?: boolean };
