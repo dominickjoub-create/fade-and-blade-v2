@@ -56,14 +56,6 @@ export function Nav() {
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a
-            href={site.whatsapp}
-            target="_blank"
-            rel="noopener"
-            className="rounded-full border border-gold px-5 py-2 font-display text-[0.8rem] uppercase tracking-[0.08em] text-gold-lite transition-colors hover:bg-gold hover:text-ink"
-          >
-            Book Now
-          </a>
         </nav>
 
         {/* Hamburger */}
@@ -95,15 +87,6 @@ export function Nav() {
             {label}
           </a>
         ))}
-        <a
-          href={site.whatsapp}
-          target="_blank"
-          rel="noopener"
-          onClick={() => setOpen(false)}
-          className="rounded-full border border-gold px-6 py-3 text-center font-display uppercase tracking-[0.08em] text-gold-lite"
-        >
-          Book Now
-        </a>
       </div>
     </header>
   );

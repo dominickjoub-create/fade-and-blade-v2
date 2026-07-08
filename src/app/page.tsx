@@ -8,7 +8,6 @@ import { Reviews } from "@/components/Reviews";
 import { Hours } from "@/components/Hours";
 import { Visit } from "@/components/Visit";
 import { Footer } from "@/components/Footer";
-import { MobileBar } from "@/components/MobileBar";
 
 function Rule() {
   return <div className="mx-auto max-w-6xl px-4 sm:px-8"><div className="hairline" /></div>;
@@ -36,9 +35,6 @@ export default function Home() {
         <Visit />
       </main>
       <Footer />
-      <MobileBar />
-      {/* bottom spacing so mobile sticky bar never covers footer */}
-      <div className="h-14 sm:hidden" />
     </>
   );
 }

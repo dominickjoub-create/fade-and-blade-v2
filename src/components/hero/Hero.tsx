@@ -76,7 +76,6 @@ export function Hero() {
     ? [1, 0, 0]
     : [holdThenOut(p, 0.24, 0.3), trap(p, 0.36, 0.42, 0.58, 0.63), inThenHold(p, 0.7, 0.76)];
 
-  const ctaOpacity = reduce ? 1 : inThenHold(p, 0.7, 0.76);
   const stageNum = p < 0.34 ? 0 : p < 0.66 ? 1 : 2;
   const shadow = { textShadow: "0 2px 18px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,0.95)" };
 
@@ -94,6 +93,7 @@ export function Hero() {
               alt=""
               fill
               priority={i === 0}
+              quality={95}
               sizes="100vw"
               className="object-cover [object-position:var(--pm)] sm:[object-position:var(--pd)]"
               style={{ "--pm": s.posMobile, "--pd": s.posDesktop } as React.CSSProperties}
@@ -118,16 +118,7 @@ export function Hero() {
             ))}
           </div>
 
-          <div style={{ opacity: ctaOpacity, pointerEvents: ctaOpacity < 0.5 ? "none" : "auto" }} className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a href={site.whatsapp} target="_blank" rel="noopener" className="rounded-full bg-ivory px-7 py-3.5 font-display text-sm uppercase tracking-[0.06em] text-ink shadow-lg transition-transform hover:-translate-y-0.5">
-              💬 Book on WhatsApp
-            </a>
-            <a href={`tel:${site.phoneTel}`} className="rounded-full border border-white/40 bg-black/40 px-7 py-3.5 font-display text-sm uppercase tracking-[0.06em] text-white backdrop-blur-sm transition-colors hover:border-gold hover:text-gold-lite">
-              📞 Call Now
-            </a>
-          </div>
-
-          <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm backdrop-blur-sm">
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-2 text-sm backdrop-blur-sm">
             <span className="tracking-widest text-gold" aria-hidden>★★★★★</span>
             <strong className="font-display">{site.rating}</strong>
             <span className="text-ivory">· {site.reviewCount} Google reviews</span>
