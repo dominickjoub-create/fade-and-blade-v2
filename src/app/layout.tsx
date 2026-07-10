@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     description: "Old-school craft. Modern finish. Book your cut with Hemza on WhatsApp.",
     url: "https://nunusbarber.co.za/",
     siteName: "Nunus Barber Shop",
-    images: [{ url: "/images/cut-1.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/images/og-cover.jpg", width: 1200, height: 630 }],
     locale: "en_ZA",
   },
   twitter: {
     card: "summary_large_image",
     title: "Nunus Barber Shop — Premium Barbering in Krugersdorp",
     description: "Old-school craft. Modern finish. Book your cut with Hemza on WhatsApp.",
-    images: ["/images/cut-1.jpg"],
+    images: ["/images/og-cover.jpg"],
   },
 };
 
@@ -56,7 +56,7 @@ function jsonLd() {
     "@context": "https://schema.org",
     "@type": "BarberShop",
     name: site.name,
-    image: "https://nunusbarber.co.za/images/cut-1.jpg",
+    image: "https://nunusbarber.co.za/images/og-cover.jpg",
     url: "https://nunusbarber.co.za/",
     telephone: site.phoneTel,
     priceRange: "R",

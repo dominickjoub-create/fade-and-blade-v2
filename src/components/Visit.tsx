@@ -2,6 +2,7 @@ import { site } from "@/lib/site";
 import { SectionHead } from "./SectionHead";
 import { Reveal } from "./Reveal";
 import { Booking } from "./Booking";
+import { IconPin, IconPhone, IconWhatsApp } from "./Icons";
 
 export function Visit() {
   return (
@@ -36,14 +37,14 @@ export function Visit() {
           </address>
 
           <div className="flex flex-wrap gap-3">
-            <a href={site.mapsQuery} target="_blank" rel="noopener" className="rounded-full border border-line px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ivory transition-colors hover:border-gold hover:text-gold-lite">
-              Directions
+            <a href={site.mapsQuery} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ivory transition-colors hover:border-gold hover:text-gold-lite">
+              <IconPin size={18} /> Directions
             </a>
-            <a href={`tel:${site.phoneTel}`} className="rounded-full border border-line px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ivory transition-colors hover:border-gold hover:text-gold-lite">
-              Call
+            <a href={`tel:${site.phoneTel}`} className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ivory transition-colors hover:border-gold hover:text-gold-lite">
+              <IconPhone size={18} /> Call
             </a>
-            <a href={site.whatsapp} target="_blank" rel="noopener" className="rounded-full bg-ivory px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ink transition-transform hover:-translate-y-0.5">
-              WhatsApp
+            <a href={site.whatsapp} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-ivory px-6 py-3 font-display text-sm uppercase tracking-[0.06em] text-ink transition-transform hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
+              <IconWhatsApp size={18} /> WhatsApp
             </a>
           </div>
         </Reveal>

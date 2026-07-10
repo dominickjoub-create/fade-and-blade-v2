@@ -25,16 +25,20 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.15} className="relative mx-auto w-full max-w-sm">
-          <div className="relative aspect-[64/76] overflow-hidden rounded-[24px] border border-line">
+          {/* editorial framing: soft shadow + thin gold corner frame */}
+          <div className="relative aspect-[5/6] overflow-hidden rounded-[24px] border border-line shadow-[0_30px_70px_-20px_rgba(0,0,0,0.8)]">
             <Image
-              src="/images/cut-1.jpg"
-              alt="Inside Nunus Barber Shop"
+              src="/images/about-portrait.jpg"
+              alt="A fresh cut at Nunus Barber Shop"
               fill
+              quality={92}
               sizes="(max-width: 768px) 90vw, 420px"
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-5 -left-4 rounded-2xl border border-line border-t-2 border-t-gold bg-ink-3 px-5 py-3 text-center">
+          <span aria-hidden className="pointer-events-none absolute -left-2 -top-2 h-10 w-10 rounded-tl-[24px] border-l-2 border-t-2 border-gold/70" />
+          <span aria-hidden className="pointer-events-none absolute -right-2 -bottom-2 h-10 w-10 rounded-br-[24px] border-b-2 border-r-2 border-gold/70" />
+          <div className="absolute -bottom-5 -left-4 rounded-2xl border border-line border-t-2 border-t-gold bg-ink-3 px-5 py-3 text-center shadow-xl">
             <strong className="block font-display text-2xl text-ivory">{about.statValue}</strong>
             <span className="text-[0.7rem] uppercase tracking-[0.14em] text-ivory-dim">{about.statLabel}</span>
           </div>

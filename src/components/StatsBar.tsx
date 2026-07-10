@@ -8,12 +8,12 @@ import { Stagger, staggerItem } from "./Reveal";
 export function StatsBar() {
   return (
     <section id="stats" className="mx-auto max-w-6xl px-4 py-16 sm:px-8" aria-label="Nunus Barber by the numbers">
-      <Stagger className="grid grid-cols-2 gap-4">
+      <Stagger className="grid grid-cols-2 gap-3 sm:gap-4">
         {stats.map((s) => (
           <motion.div
             key={s.label}
             variants={staggerItem}
-            className={`relative overflow-hidden rounded-[var(--radius-card)] border p-7 sm:p-9 ${
+            className={`relative overflow-hidden rounded-[var(--radius-card)] border p-5 sm:p-9 ${
               s.feature ? "border-transparent text-ink" : "border-line bg-ink-2 text-ivory"
             }`}
             style={
@@ -35,7 +35,7 @@ export function StatsBar() {
                 }}
               />
             )}
-            <div className="relative flex items-start font-display text-[clamp(3rem,11vw,5.2rem)] leading-[0.9] tracking-[0.02em]">
+            <div className="relative flex items-start whitespace-nowrap font-display text-[clamp(2.15rem,9vw,5.2rem)] leading-[0.9] tracking-[0.01em]">
               <CountUp value={s.value} decimals={s.decimals ?? 0} />
               {s.suffix && (
                 <span className={`ml-1 mt-2 text-[0.45em] ${s.feature ? "text-ink" : "text-gold"}`}>{s.suffix}</span>

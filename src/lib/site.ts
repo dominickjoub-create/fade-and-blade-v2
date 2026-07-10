@@ -42,16 +42,17 @@ export const about = {
   statValue: "5",
 };
 
-export type Service = { name: string; blurb: string; icon: string; feature?: boolean };
+import type { ServiceIconKey } from "@/components/Icons";
 
-// TODO: replace every "from R___" price in Services.tsx with the shop's real price
+export type Service = { name: string; blurb: string; icon: ServiceIconKey; price: string; feature?: boolean };
+
 export const services: Service[] = [
-  { name: "Haircut", blurb: "Classic scissor or clipper cut, styled and finished to your taste.", icon: "✂️" },
-  { name: "Skin Fade", blurb: "Seamless blend down to the skin — sharp lines, flawless gradient.", icon: "💈" },
-  { name: "Beard Trim & Shape", blurb: "Sculpted, lined and balanced to frame your face.", icon: "🧔" },
-  { name: "Hot Towel Shave", blurb: "Traditional straight-razor shave with hot towels and balm.", icon: "🪒" },
-  { name: "Cut + Beard Combo", blurb: "The full reset — haircut paired with a shaped, conditioned beard.", icon: "⭐", feature: true },
-  { name: "Kids Cut", blurb: "Patient, friendly cuts for the young gentlemen.", icon: "🧒" },
+  { name: "Haircut", blurb: "Classic scissor or clipper cut, styled and finished to your taste.", icon: "scissors", price: "R110" },
+  { name: "Skin Fade", blurb: "Seamless blend down to the skin — sharp lines, flawless gradient.", icon: "fade", price: "R140" },
+  { name: "Beard Trim & Shape", blurb: "Sculpted, lined and balanced to frame your face.", icon: "beard", price: "R70" },
+  { name: "Hot Towel Shave", blurb: "Traditional straight-razor shave with hot towels and balm.", icon: "razor", price: "R130" },
+  { name: "Cut + Beard Combo", blurb: "The full reset — haircut paired with a shaped, conditioned beard.", icon: "crown", price: "R190", feature: true },
+  { name: "Kids Cut", blurb: "Patient, friendly cuts for the young gentlemen.", icon: "kid", price: "R90" },
 ];
 
 export type Stat = { value: number; suffix?: string; label: string; feature?: boolean; decimals?: number };

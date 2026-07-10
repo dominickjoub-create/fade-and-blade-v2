@@ -41,7 +41,7 @@ export function Gallery() {
             variants={staggerItem}
             whileHover={{ y: -4 }}
             onClick={() => setOpen(i)}
-            className="group relative aspect-[6/7] overflow-hidden rounded-[24px] border border-line"
+            className="group relative aspect-[4/5] overflow-hidden rounded-[24px] border border-line"
             aria-label={`View: ${g.alt}`}
           >
             <Image

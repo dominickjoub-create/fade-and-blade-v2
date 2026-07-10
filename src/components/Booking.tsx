@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { services, site } from "@/lib/site";
+import { IconWhatsApp } from "./Icons";
 
 export function Booking() {
   const [name, setName] = useState("");
@@ -55,8 +56,8 @@ export function Booking() {
         </div>
       </div>
 
-      <button type="submit" className="mt-6 w-full rounded-full bg-ivory py-3.5 font-display text-sm uppercase tracking-[0.06em] text-ink transition-transform hover:-translate-y-0.5">
-        Send on WhatsApp
+      <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-ivory py-3.5 font-display text-sm uppercase tracking-[0.06em] text-ink transition-all hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0">
+        <IconWhatsApp size={18} /> Send on WhatsApp
       </button>
       <p className="mt-4 text-center text-sm text-ivory-dim">
         Prefer to call? <a href={`tel:${site.phoneTel}`} className="text-gold-lite">{site.phoneDisplay}</a>

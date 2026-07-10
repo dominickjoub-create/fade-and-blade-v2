@@ -4,7 +4,11 @@ export function SectionHead({ eyebrow, title, lead }: { eyebrow: string; title: 
   return (
     <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
       <Reveal>
-        <p className="mb-3 font-display text-xs uppercase tracking-[0.34em] text-gold">{eyebrow}</p>
+        <p className="mb-3 flex items-center justify-center gap-3 font-display text-xs uppercase tracking-[0.34em] text-gold">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-transparent to-gold/70" />
+          {eyebrow}
+          <span aria-hidden className="h-px w-8 bg-gradient-to-l from-transparent to-gold/70" />
+        </p>
         <h2 className="font-display text-[clamp(2rem,6vw,3.4rem)] uppercase leading-[0.95] tracking-[0.02em] text-ivory">
           {title}
         </h2>
